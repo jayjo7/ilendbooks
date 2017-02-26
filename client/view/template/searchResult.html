@@ -1,0 +1,58 @@
+<template name="searchResult">
+	<div class=".container-fluid">
+	  	<div class="row">
+	      	<div >
+			   	<h4 class="page-header">Search Results ...</h4>
+	      	</div>
+	     </div>
+	  	<div class="row">
+	      	<div >
+	       	 	<div>
+	       	 		<strong>Title=</strong> {{getSearchResult.title}};
+	       	 		<strong>Author=</strong> {{getSearchAuthor}}
+				</div>
+			</div>
+		</div>
+	  	<div class="row">
+	      	<div >
+	       	 		<span>&nbsp;</span>
+			</div>
+		</div>
+
+		{{#each getSearchResults}}
+			<div class="row">
+		      	    <div class="col-xs-5 col-sm-6 col-md-2">
+                       <img src="{{getMediumImage MediumImage}}" alt=""> 
+                    </div>
+		      	    <div class="col-xs-7 col-sm-6 col-md-10">
+                       Title - <strong class="text-left">{{getTitle ItemAttributes}}</strong><br>
+                       Author- <strong class="text-left">{{getAuthor ItemAttributes}}</strong><br>
+                       No of pages - <strong class="text-left">{{getNumberOfPages ItemAttributes}}</strong><br>
+                       Publisher - <strong class="text-left">{{getPublisher ItemAttributes}}</strong><br>
+                       Edition - <strong class="text-left">{{getEdition ItemAttributes}}</strong><br>
+                       ISBN - <strong class="text-left">{{getISBN ItemAttributes}}</strong><br>
+                       Pub Date - <strong class="text-left">{{getPublicationDate ItemAttributes}}</strong><br>
+                       <a href="{{pathFor 'borrow'}}">Find Lender</a>  or  <a href="{{pathFor 'lend'}}">Love to Lend</a>
+                    </div>
+			</div>
+	  		<div class="row">
+	      		<div >
+	       	 		<span>&nbsp;</span>
+				</div>
+			</div>
+	  		<div class="row">
+	      		<div >
+	       	 		<hr>
+				</div>
+			</div>
+		    <div class="row">
+	      		<div >
+	       	 		<span>&nbsp;</span>
+				</div>
+			</div>
+	    {{/each}}
+
+
+	</div>
+</template>
+

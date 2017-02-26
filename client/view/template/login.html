@@ -1,22 +1,36 @@
 <template name="login">
 <div class=".container-fluid">
-  <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <h4 class="page-header">Login</h4>
-        <form id="login" >
-          <div class="form-group">
-            <label for="emailAddress">Email Address</label>
-            <input type="text" name="emailAddress" class="form-control" placeholder="Email Address" required>@uw.edu
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <h4 class="page-header">Login</h4>
           </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Password" required>
+       </div>
+       <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <span>Not signed up? don't worry, do it  <a href="{{pathFor 'signup'}}">here</a></span>
           </div>
-          <div class="form-group">
-            <input type="submit" class="btn btn-success pull-right" value="Sign Up">
+       </div>
+       <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <span>&nbsp;</span>
           </div>
-        </form>
-      </div>
-    </div>
+       </div>
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <form id="login" >
+              <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <input type="text" name="emailAddress" class="form-control" placeholder="Email Address" required>@uw.edu
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-success pull-right" value="Login">
+              </div>
+            </form>
+          </div>
+        </div>
   </div>
 </template>

@@ -1,23 +1,24 @@
-<template name="borrow">
+<template name="logout">
 	<div class=".container-fluid">
-	    <div class="row">
+		  	<div class="row">
 	      	<div class="col-xs-12 col-sm-6 col-md-4">
-		        <h4 class="page-header">Borrow is under construction ...</h4>
+	      		<h4 class="page-header">Logout ?</h4>
 	      	</div>
 	     </div>
 		{{#if currentUser}}
 		  	<div class="row">
 		      	<div class="col-xs-12 col-sm-6 col-md-4">
 		       	 	<div>
-						<span>Coming soon...</span>
+						<span>You are still logged in...</span>
 					</div>
 				</div>
 			</div>
+
 		{{else}}
 		  	<div class="row">
 		      	<div class="col-xs-12 col-sm-6 col-md-4">
 		       	 	<div>
-						<span>if you are alreay signed up plesse <a href="{{pathFor 'login'}}">login</a> else <a href="{{pathFor 'signup'}}">singup</a></span>
+						<span>You are logged out sucessfully... <a href="{{pathFor 'login'}}">login</a> again?</span>
 					</div>
 				</div>
 			</div>

@@ -23,3 +23,10 @@ Template.signup.events({
     });
   }
 });
+
+Template.signup.helpers({
+
+    getCurrentUserId: function() {
+        return Meteor.user().emails[0].address;
+  }
+});

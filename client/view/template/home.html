@@ -2,11 +2,41 @@
 	<div class=".container-fluid">
 	  	<div class="row">
 	      	<div class="col-xs-12 col-sm-6 col-md-4">
-	        	<h4 class="page-header">Welcome to ilendbooks!</h4>
-	       	 	<div>
-					<span>if you are alreay signed up plesse <a href="{{pathFor 'login'}}">login</a> else <a href="{{pathFor 'signup'}}">singup</a></span>
+	      		<h4 class="page-header">Welcome to ilendbooks!</h4>
+	      	</div>
+	     </div>
+
+        {{#if currentUser}}
+		  	<div class="row">
+		      	<div class="col-xs-12 col-sm-6 col-md-4">
+		       	 	<div>
+						<span>Excited ! you are back, start searching ...</span>
+					</div>
 				</div>
 			</div>
-		</div>
+		    <div class="row">
+		      	<div class="col-xs-12 col-sm-6 col-md-4">
+		       	 	<div>
+		       	 	&nbsp;
+					</div>
+				</div>
+			</div>
+		  	<div class="row">
+		      	<div class="col-xs-12 col-sm-6 col-md-4">
+		       	 	<div>
+		       	 	<a href="{{pathFor 'search'}}" class="btn btn-success">Search</a>
+					</div>
+				</div>
+			</div>
+
+        {{else}}
+		  	<div class="row">
+		      	<div class="col-xs-12 col-sm-6 col-md-4">
+		       	 	<div>
+						<span>if you are alreay signed up plesse <a href="{{pathFor 'login'}}">login</a> else <a href="{{pathFor 'signup'}}">singup</a></span>
+					</div>
+				</div>
+			</div>
+		{{/if}}
 	</div>
 </template>

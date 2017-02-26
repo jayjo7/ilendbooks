@@ -24,8 +24,12 @@
         <li class="page-scroll"> <a href="{{pathFor 'search'}}">Search</a></li>
         <li class="page-scroll"> <a href="{{pathFor 'borrow'}}">Borrow</a></li>
         <li class="page-scroll"> <a href="{{pathFor 'lend'}}">Lend</a></li>
-        <li class="page-scroll"> <a href="{{pathFor 'login'}}">Login</a></li>
-        <li class="page-scroll"> <a href="{{pathFor 'signup'}}">Sign up</a></li>
+        {{#if currentUser}}
+            <li class="page-scroll logout"> <a href="{{pathFor 'logout'}}">Logout</a></li>
+        {{else}}    
+            <li class="page-scroll"> <a href="{{pathFor 'login'}}">Login/Signup</a></li>
+        {{/if}}
+        <!--<li class="page-scroll"> <a href="{{pathFor 'signup'}}">Sign up</a></li> -->
         <li class="page-scroll"> <a href="{{pathFor 'aboutUs'}}">About Us</a></li>
       </ul>
     </div>
